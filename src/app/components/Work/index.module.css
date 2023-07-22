@@ -1,0 +1,6 @@
+.workWrapper {
+    background: var(--color-secondary);
+    color: var(--color-white);
+    padding-top: 80px;
+    margin-top: 0;
+}

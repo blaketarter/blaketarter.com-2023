@@ -1,0 +1,82 @@
+.aboutContent {
+    display: grid;
+    grid-template-areas: "image text";
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 1fr;
+    gap: 60px;
+}
+
+.imageWrapper {
+    grid-area: image;
+    height: 200px;
+    width: 200px;
+    position: relative;
+}
+
+.imageBackground {
+    background: var(--color-primary);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border-radius: var(--border-radius);
+
+    /* color: var(--color-primary);
+    background-image: repeating-linear-gradient(135deg, currentColor, currentColor 4px, transparent 0, transparent 50%);
+    background-size: 30px 30px; */
+
+    transform: translate(1rem, 1rem);
+}
+
+.image {
+    border-radius: var(--border-radius);
+}
+
+.aboutText {
+    grid-area: text;
+}
+
+.knowWrapper {
+    margin: 160px 0 80px;
+}
+
+.knowText {
+    font-size: var(--h2);
+    font-weight: 700;
+}
+
+.knowSubtext {
+    margin-top: 1rem;
+}
+
+.knowTech {
+    color: var(--color-primary)
+}
+
+.calloutTechs {
+
+}
+
+.calloutTech {
+    margin: 80px 0;
+}
+
+.calloutTechHeader {
+    background: var(--color-primary);
+    display: inline-block;
+    padding: 0.25rem;
+    font-size: var(--h3);
+    font-weight: 700;
+    border-radius: var(--border-radius);
+    margin-bottom: 2rem;
+}
+
+.calloutTechText {
+
+}
+
+.additionTechHeaders {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(1fr);
+    margin-top: 60px;
+}

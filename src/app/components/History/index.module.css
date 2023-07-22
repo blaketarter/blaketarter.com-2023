@@ -1,0 +1,46 @@
+.historyWrapper {
+    background: var(--color-secondary);
+    color: var(--color-white);
+    padding-top: 80px;
+}
+
+.jobHistory {
+    margin: 120px 0;
+}
+
+.currentJob {
+    background: var(--color-primary);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+}
+
+.currentJobTitle {
+    font-size: var(--h3);
+}
+
+.currentJobDates {
+    font-weight: 700;
+    margin-top: 1rem;
+}
+
+.currentJobText {
+    margin-top: 1rem;
+}
+
+.pastJob {
+    padding: 0 2rem;
+    margin-top: 80px;
+}
+
+.pastJobTitle {
+    font-size: var(--h3);
+}
+
+.pastJobDates {
+    font-weight: 700;
+    margin-top: 1rem;
+}
+
+.pastJobText {
+    margin-top: 1rem;
+}

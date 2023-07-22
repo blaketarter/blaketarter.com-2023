@@ -1,0 +1,12 @@
+.sectionWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 160px;
+}
+
+.sectionInner {
+    margin: 0 var(--base-margin);
+    max-width: var(--max-width);
+    width: 100%;
+}

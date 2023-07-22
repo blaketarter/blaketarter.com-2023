@@ -1,0 +1,24 @@
+.findWrapper {
+    background: var(--color-secondary);
+    color: var(--color-white);
+    padding-top: 80px;
+    margin-top: 0;
+}
+
+.links {
+    list-style: none;
+}
+
+.linkWrapper {
+    margin-top: 2rem;
+}
+
+.linkName {
+    margin-right: 2rem;
+    font-size: var(--h3);
+    font-weight: 700;
+}
+
+.linkHref {
+    color: var(--color-white);
+}

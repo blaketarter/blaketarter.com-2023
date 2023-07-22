@@ -1,0 +1,4 @@
+.sectionTitle {
+    font-size: var(--h2);
+    margin-bottom: var(--base-margin);
+}

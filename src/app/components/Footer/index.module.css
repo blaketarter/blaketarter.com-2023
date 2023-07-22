@@ -1,0 +1,28 @@
+.footerWrapper {
+    padding: 80px 0;
+    margin-top: 0;
+    position: relative;
+    background: var(--color-secondary);
+    height: 400px;
+}
+
+.footerBackground {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    color: var(--color-primary);
+    background-image: repeating-linear-gradient(135deg, currentColor, currentColor 4px, transparent 0, transparent 50%);
+    background-size: 30px 30px;
+    background-color: var(--color-secondary);
+}
+
+.footerContent {
+    position: relative;
+    margin: 0;
+}
+
+.copywrite {
+    color: var(--color-white);
+    position: relative;
+    font-weight: 700;
+}

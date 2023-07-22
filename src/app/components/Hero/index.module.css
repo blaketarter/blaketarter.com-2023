@@ -1,0 +1,92 @@
+.heroContainer {
+    height: 70vh;
+    width: 100%;
+
+    max-width: 3456px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+
+    position: relative;
+
+    color: var(--color-primary);
+    background-image: repeating-linear-gradient(135deg, currentColor, currentColor 4px, transparent 0, transparent 50%);
+    background-size: 30px 30px;
+    background-color: var(--color-secondary);
+}
+
+.shape1 {
+    height: 100%;
+    width: 90%;
+    position: absolute;
+    transform: translateX(-7vw);
+}
+
+.shape1 svg {
+    color: var(--color-secondary);
+
+    height: 100%;
+    width: 100%;
+}
+
+.shape2 {
+    height: 40vw;
+    width: 110%;
+    max-height: 580px;
+    position: absolute;
+
+    color: var(--color-secondary);
+    background-image: repeating-linear-gradient(135deg, currentColor, currentColor 4px, transparent 0, transparent 50%);
+    background-size: 30px 30px;
+
+    clip-path: polygon(95% 0, 90% 75%, 0 100%, 0 0);
+}
+
+.shape3 {
+    height: 100%;
+    width: 90%;
+    position: absolute;
+    right: -6vw;
+}
+
+.shape3 svg {
+    color: var(--color-primary);
+
+    height: 100%;
+    width: 100%;
+}
+
+.shape4 {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transform: translateY(10%);
+}
+
+.shape4 svg {
+    height: 100%;
+    width: 100%;
+    color: var(--color-foreground);
+}
+
+.heroText {
+    position: relative;
+
+    margin: var(--base-margin);
+
+    max-width: var(--max-width);
+    width: 100%;
+}
+
+.headline {
+    font-size: var(--h1);
+    font-weight: 900;
+    color: var(--color-white)
+}
+
+.subHeadline {
+    font-size: var(--body-large);
+    font-weight: 400;
+    color: var(--color-white)
+}
