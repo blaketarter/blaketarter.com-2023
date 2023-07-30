@@ -1,24 +1,35 @@
 .footerWrapper {
-    padding: 80px 0;
+    padding: 80px 0 0;
     margin-top: 0;
     position: relative;
     background: var(--color-secondary);
-    height: 400px;
+    height: 300px;
 }
 
 .footerBackground {
     position: absolute;
     height: 100%;
     width: 100%;
-    color: var(--color-primary);
+    color: var(--color-secondary);
     background-image: repeating-linear-gradient(135deg, currentColor, currentColor 4px, transparent 0, transparent 50%);
     background-size: 30px 30px;
-    background-color: var(--color-secondary);
+    background-color: var(--color-primary);
+    clip-path: polygon(100% 0px, 100% 100%, 100% 100%, 0px 100%, 0px 80px);
 }
 
 .footerContent {
     position: relative;
     margin: 0;
+    height: 100%;
+    width: 100%;
+    padding-top: 80px;
+}
+
+.footerText {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .copywrite {

@@ -3,26 +3,29 @@ import SectionTitle from '../SectionTitle'
 import Tag from '../Tag'
 import styles from './index.module.css'
 
-const links = [
-    {
-        name: 'GitHub',
-        url: 'https://github.com/blaketarter'
-    },
-    {
-        name: 'Linkedin',
-        url: 'https://www.linkedin.com/in/blaketarter'
-    },
-    {
-        name: 'Codepen',
-        url: 'https://codepen.io/blaketarter/'
-    },
-    {
-        name: 'NPM',
-        url: 'https://twitter.com/itsblaketarter'
-    }
-]
+async function getLinks() {
+    return [
+        {
+            name: 'GitHub',
+            url: 'https://github.com/blaketarter'
+        },
+        {
+            name: 'Linkedin',
+            url: 'https://www.linkedin.com/in/blaketarter'
+        },
+        {
+            name: 'Codepen',
+            url: 'https://codepen.io/blaketarter/'
+        },
+        {
+            name: 'NPM',
+            url: 'https://twitter.com/itsblaketarter'
+        }
+    ]
+}
 
-export default function FindMe() {
+export default async function FindMe() {
+    const links = await getLinks()
     return (
         <Section className={styles.findWrapper}>
             <>
