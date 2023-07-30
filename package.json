@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "lint:fix": "next lint --fix"
+    "lint:fix": "next lint --fix",
+    "typecheck": "tsc --pretty --noEmit",
+    "ci": "run-s typecheck lint"
   },
   "dependencies": {
     "@types/node": "20.4.2",
@@ -24,6 +26,7 @@
   "devDependencies": {
     "eslint-config-prettier": "^8.9.0",
     "eslint-plugin-prettier": "^5.0.0",
+    "npm-run-all2": "^6.0.6",
     "prettier": "^3.0.0"
   }
 }
