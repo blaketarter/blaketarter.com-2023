@@ -1,10 +1,10 @@
-import About from './components/About'
-import FindMe from './components/FindMe'
-import Footer from './components/Footer'
-import Hero from './components/Hero'
-import History from './components/History'
-import Work from './components/Work'
-import styles from './page.module.css'
+import About from "./components/About"
+import FindMe from "./components/FindMe"
+import Footer from "./components/Footer"
+import Hero from "./components/Hero"
+import History from "./components/History"
+import Work from "./components/Work"
+import styles from "./page.module.css"
 
 export default function Home() {
   return (
