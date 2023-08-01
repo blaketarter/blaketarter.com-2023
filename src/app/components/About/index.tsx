@@ -3,6 +3,7 @@ import styles from "./index.module.css"
 import Section from "../Section"
 import SectionTitle from "../SectionTitle"
 import Tag from "../Tag"
+import Typer from "../Typer"
 
 async function getTechs() {
   return [
@@ -69,7 +70,10 @@ export default async function About() {
         </div>
         <div className={styles.knowWrapper}>
           <p className={styles.knowText}>
-            I know some <span className={styles.knowTech}>Next.js</span>
+            I know some{" "}
+            <span className={styles.knowTech}>
+              <Typer words={techs.map((tech) => tech.name)} />
+            </span>
           </p>
           <p className={styles.knowSubtext}>
             I don&apos;t want to toot my own horn, but I do know a little
