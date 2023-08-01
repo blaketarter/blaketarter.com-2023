@@ -99,7 +99,7 @@ export default async function About() {
           <div className={styles.additionTechHeaders}>
             {techs.slice(2).map((tech) => (
               <div className={styles.additionalTech} key={tech.name}>
-                <Tag element="div" className={styles.calloutTechHeader}>
+                <Tag element="div" className={styles.additionTechHeader}>
                   <p>{tech.name}</p>
                 </Tag>
               </div>

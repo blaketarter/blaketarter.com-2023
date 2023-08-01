@@ -1,6 +1,7 @@
 "use client"
 import { useEffect, useMemo, useRef, useState, useTransition } from "react"
 import styles from "./index.module.css"
+import classNames from "classnames"
 
 interface TyperOptions {
   pauseTime?: number
@@ -14,9 +15,15 @@ interface TyperProps {
   words: string[]
   animate?: boolean
   options?: TyperOptions
+  className?: string
 }
 
-export default function Typer({ words, animate = true, options }: TyperProps) {
+export default function Typer({
+  words,
+  animate = true,
+  options,
+  className,
+}: TyperProps) {
   const [_, startTransition] = useTransition()
   const timeoutRef = useRef<NodeJS.Timeout | null>(null)
   const [state, setTypedText] = useState<{
@@ -124,7 +131,7 @@ export default function Typer({ words, animate = true, options }: TyperProps) {
   ])
 
   return (
-    <span className={styles.typer}>
+    <span className={classNames(styles.typer, className)}>
       {state.text}
       <span className={styles.cursor}>|</span>
     </span>

@@ -1,8 +1,8 @@
 :root {
-  --max-width: 1440px;
+  --max-width: 1200px;
   --border-radius: 4px;
-  --base-margin: 80px;
-  --base-rem: 18px;
+  --base-margin: 40px;
+  --base-rem: 16px;
 
   --color-black: #333;
   --color-white: #fff;
@@ -18,12 +18,38 @@
 
   font-size: var(--base-rem);
 
-  --h1: 7rem;
-  --h2: 3.5rem;
-  --h3: 1.75rem;
+  --h1: 4rem;
+  --h2: 2rem;
+  --h3: 1.5rem;
 
   --body: 1rem;
-  --body-large: 1.5rem;
+  --body-large: 1.25rem;
+}
+
+@media screen and (min-width: 600px) {
+  :root {
+    --base-rem: 18px;
+    --base-margin: 40px;
+
+    --h1: 5rem;
+    --h2: 2.5rem;
+    --h3: 2rem;
+
+    --body-large: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  :root {
+    --base-rem: 18px;
+    --base-margin: 80px;
+
+    --h1: 7rem;
+    --h2: 3.5rem;
+    --h3: 1.5rem;
+
+    --body-large: 1.5rem;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -51,6 +77,10 @@ body {
   background: var(--foreground-rgb);
 
   /* min-height: 100vh; */
+}
+
+p {
+  font-size: var(--body);
 }
 
 @media (prefers-color-scheme: dark) {
