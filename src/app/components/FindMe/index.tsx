@@ -1,3 +1,4 @@
+import FadeIn from "../FadeIn"
 import Section from "../Section"
 import SectionTitle from "../SectionTitle"
 import Tag from "../Tag"
@@ -29,19 +30,25 @@ export default async function FindMe() {
   return (
     <Section className={styles.findWrapper}>
       <>
-        <SectionTitle>Find me on the Internet</SectionTitle>
+        <FadeIn>
+          <SectionTitle>Find me on the Internet</SectionTitle>
+        </FadeIn>
         <ul className={styles.links}>
-          {links.map((link) => (
+          {links.map((link, i) => (
             <li key={link.name} className={styles.linkWrapper}>
-              <Tag className={styles.linkName}>{link.name}</Tag>
-              <a
-                className={styles.linkHref}
-                href={link.url}
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-              >
-                {link.url}
-              </a>
+              <FadeIn element="span" delay={50 * i}>
+                <Tag className={styles.linkName}>{link.name}</Tag>
+              </FadeIn>
+              <FadeIn delay={250 + 50 * i} element="span">
+                <a
+                  className={styles.linkHref}
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                >
+                  {link.url}
+                </a>
+              </FadeIn>
             </li>
           ))}
         </ul>

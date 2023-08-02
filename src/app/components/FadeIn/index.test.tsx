@@ -1,17 +1,17 @@
 import { render, screen } from "@testing-library/react"
-import Tag from "."
+import FadeIn from "."
 
-describe("Tag", () => {
+describe("FadeIn", () => {
   it("Renders correctly", () => {
     // Arrange
     const children = "Test children"
 
     // Act
-    render(<Tag>{children}</Tag>)
+    render(<FadeIn>{children}</FadeIn>)
 
     // Assert
     expect(screen.getByText(children)).toBeInTheDocument()
-    expect(screen.getByText(children).tagName).toBe("SPAN")
+    expect(screen.getByText(children).tagName).toBe("DIV")
   })
 
   it("Renders children elements", () => {
@@ -19,7 +19,7 @@ describe("Tag", () => {
     const children = <p data-testid="1">Test children</p>
 
     // Act
-    render(<Tag>{children}</Tag>)
+    render(<FadeIn>{children}</FadeIn>)
 
     // Assert
     expect(screen.getByText("Test children")).toBeInTheDocument()
@@ -35,7 +35,7 @@ describe("Tag", () => {
     const className = "test-class"
 
     // Act
-    render(<Tag className={className}>{children}</Tag>)
+    render(<FadeIn className={className}>{children}</FadeIn>)
 
     // Assert
     expect(screen.getByText(children)).toHaveClass(className)
@@ -44,12 +44,12 @@ describe("Tag", () => {
   it("Optionally changes element", () => {
     // Arrange
     const children = "Test children"
-    const element = "div"
+    const element = "span"
 
     // Act
-    render(<Tag element={element}>{children}</Tag>)
+    render(<FadeIn element={element}>{children}</FadeIn>)
 
     // Assert
-    expect(screen.getByText(children).tagName).toBe("DIV")
+    expect(screen.getByText(children).tagName).toBe("SPAN")
   })
 })

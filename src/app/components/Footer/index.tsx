@@ -1,5 +1,6 @@
 import styles from "./index.module.css"
 import Section from "../Section"
+import FadeIn from "../FadeIn"
 
 export default function Footer() {
   return (
@@ -7,7 +8,9 @@ export default function Footer() {
       <div className={styles.footerBackground} />
       <Section className={styles.footerContent} element="div">
         <div className={styles.footerText}>
-          <p className={styles.copywrite}>© 2023 Blake Tarter</p>
+          <FadeIn rootMargin="0px">
+            <p className={styles.copywrite}>© 2023 Blake Tarter</p>
+          </FadeIn>
         </div>
       </Section>
     </div>

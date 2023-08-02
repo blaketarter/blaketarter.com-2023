@@ -1,3 +1,4 @@
+import FadeIn from "../FadeIn"
 import styles from "./index.module.css"
 
 export default function Hero() {
@@ -8,11 +9,25 @@ export default function Hero() {
       <div className={styles.heroBackground1} />
       <div className={styles.heroText}>
         <h1 className={styles.headline}>
-          Hi, I&rsquo;m <br /> Blake Tarter
+          <FadeIn delay={250} element="span">
+            Hi
+          </FadeIn>
+          <FadeIn delay={650} element="span">
+            ,
+          </FadeIn>{" "}
+          <FadeIn delay={750} element="span">
+            I&rsquo;m
+          </FadeIn>
+          <br />
+          <FadeIn delay={1000} element="span">
+            Blake Tarter
+          </FadeIn>
         </h1>
-        <p className={styles.subHeadline}>
-          A Kansas City Based Typescript Developer
-        </p>
+        <FadeIn delay={1500}>
+          <p className={styles.subHeadline}>
+            A Kansas City Based Typescript Developer
+          </p>
+        </FadeIn>
       </div>
     </section>
   )

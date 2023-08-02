@@ -4,6 +4,7 @@ import Section from "../Section"
 import SectionTitle from "../SectionTitle"
 import Tag from "../Tag"
 import Typer from "../Typer"
+import FadeIn from "../FadeIn"
 
 async function getTechs() {
   return [
@@ -38,70 +39,90 @@ export default async function About() {
   return (
     <Section>
       <>
-        <SectionTitle>About Me</SectionTitle>
+        <FadeIn>
+          <SectionTitle>About Me</SectionTitle>
+        </FadeIn>
         <div className={styles.aboutContent}>
-          <div className={styles.imageWrapper}>
-            <div className={styles.imageBackground} />
-            <Image
-              src="/me.jpg"
-              alt="Picture of Blake smiling"
-              fill={true}
-              className={styles.image}
-            />
-          </div>
-          <p className={styles.aboutText}>
-            Hi, I&apos;m Blake 👋
-            <br />
-            <br />
-            I&apos;m a TypeScript developer with over six years of experience
-            planning, creating, and maintaining various types of apps and
-            websites. My current weapons of choice include React, Redux,
-            TypeScript, and Node. I spend my days building enterprise-grade web
-            apps, consumer facing websites, and mobile apps. I kick back on my
-            nights and weekends by honing my skills and working on passion
-            projects.
-            <br />
-            <br />
-            Currently I work at Crema, a product agency that partners with
-            funded startups and existing brands to create technology solutions
-            and new digital ventures. I also do some freelance work in my spare
-            time with Midwestern Originals.
-          </p>
+          <FadeIn>
+            <div className={styles.imageWrapper}>
+              <div className={styles.imageBackground} />
+              <Image
+                src="/me.jpg"
+                alt="Picture of Blake smiling"
+                fill={true}
+                className={styles.image}
+              />
+            </div>
+          </FadeIn>
+          <FadeIn delay={250}>
+            <p className={styles.aboutText}>
+              Hi, I&apos;m Blake 👋
+              <br />
+              <br />
+              I&apos;m a TypeScript developer with over six years of experience
+              planning, creating, and maintaining various types of apps and
+              websites. My current weapons of choice include React, Redux,
+              TypeScript, and Node. I spend my days building enterprise-grade
+              web apps, consumer facing websites, and mobile apps. I kick back
+              on my nights and weekends by honing my skills and working on
+              passion projects.
+              <br />
+              <br />
+              Currently I work at Crema, a product agency that partners with
+              funded startups and existing brands to create technology solutions
+              and new digital ventures. I also do some freelance work in my
+              spare time with Midwestern Originals.
+            </p>
+          </FadeIn>
         </div>
         <div className={styles.knowWrapper}>
-          <p className={styles.knowText}>
-            I know some{" "}
-            <span className={styles.knowTech}>
-              <Typer words={techs.map((tech) => tech.name)} />
-            </span>
-          </p>
-          <p className={styles.knowSubtext}>
-            I don&apos;t want to toot my own horn, but I do know a little
-            something about these (toot-toot 🚂):
-          </p>
+          <FadeIn>
+            <p className={styles.knowText}>
+              I know some{" "}
+              <span className={styles.knowTech}>
+                <Typer words={techs.map((tech) => tech.name)} />
+              </span>
+            </p>
+          </FadeIn>
+          <FadeIn delay={250}>
+            <p className={styles.knowSubtext}>
+              I don&apos;t want to toot my own horn, but I do know a little
+              something about these (toot-toot 🚂):
+            </p>
+          </FadeIn>
         </div>
         <div>
           {techs.slice(0, 2).map((tech) => (
             <div className={styles.calloutTech} key={tech.name}>
-              <Tag element="div" className={styles.calloutTechHeader}>
-                <p>{tech.name}</p>
-              </Tag>
-              <p>{tech.text}</p>
+              <>
+                <FadeIn>
+                  <Tag element="div" className={styles.calloutTechHeader}>
+                    <p>{tech.name}</p>
+                  </Tag>
+                </FadeIn>
+                <FadeIn delay={250}>
+                  <p>{tech.text}</p>
+                </FadeIn>
+              </>
             </div>
           ))}
         </div>
         <div className={styles.additionalTechs}>
-          <p>
-            Just because I didn&apos;t write a little blurb doesn&apos;t mean I
-            don&apos;t have experience in something, here are some things
-            I&apos;ve used in production:
-          </p>
+          <FadeIn>
+            <p>
+              Just because I didn&apos;t write a little blurb doesn&apos;t mean
+              I don&apos;t have experience in something, here are some things
+              I&apos;ve used in production:
+            </p>
+          </FadeIn>
           <div className={styles.additionTechHeaders}>
-            {techs.slice(2).map((tech) => (
+            {techs.slice(2).map((tech, i) => (
               <div className={styles.additionalTech} key={tech.name}>
-                <Tag element="div" className={styles.additionTechHeader}>
-                  <p>{tech.name}</p>
-                </Tag>
+                <FadeIn delay={50 * i}>
+                  <Tag element="div" className={styles.additionTechHeader}>
+                    <p>{tech.name}</p>
+                  </Tag>
+                </FadeIn>
               </div>
             ))}
           </div>

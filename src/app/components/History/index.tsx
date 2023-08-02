@@ -1,3 +1,4 @@
+import FadeIn from "../FadeIn"
 import Section from "../Section"
 import SectionTitle from "../SectionTitle"
 import Tag from "../Tag"
@@ -54,39 +55,58 @@ export default async function History() {
       <div className={styles.historyTransitionBackground2} />
       <Section className={styles.historyWrapper} element="div">
         <>
-          <SectionTitle className={styles.title}>My History</SectionTitle>
-          <p>
-            I&apos;ve had an interesting journey to get me to where I am now.
-            Originally I set out to be a graphic designer, then switched to web
-            design in college, and then eventually realized web development was
-            my true passion. While growing up, I was always interested in
-            computers and took as much time as I could to teach myself
-            programming and design. I&apos;ve learned I have a passion to create
-            and problem solve; web development is a perfect culmination of these
-            two things. <br />
-            <br />
-            My career so far has taken me from startup to agency. Using a myriad
-            of different technologies, frameworks, and methodologies I&apos;ve
-            built everything from web applications to marketing websites, hybrid
-            and native applications, and then back again. Currently I happily
-            find myself working on web and native applications using React and
-            TypeScript as well as the occasional freelance website.
-          </p>
+          <FadeIn>
+            <SectionTitle className={styles.title}>My History</SectionTitle>
+          </FadeIn>
+          <FadeIn>
+            <p>
+              I&apos;ve had an interesting journey to get me to where I am now.
+              Originally I set out to be a graphic designer, then switched to
+              web design in college, and then eventually realized web
+              development was my true passion. While growing up, I was always
+              interested in computers and took as much time as I could to teach
+              myself programming and design. I&apos;ve learned I have a passion
+              to create and problem solve; web development is a perfect
+              culmination of these two things. <br />
+              <br />
+              My career so far has taken me from startup to agency. Using a
+              myriad of different technologies, frameworks, and methodologies
+              I&apos;ve built everything from web applications to marketing
+              websites, hybrid and native applications, and then back again.
+              Currently I happily find myself working on web and native
+              applications using React and TypeScript as well as the occasional
+              freelance website.
+            </p>
+          </FadeIn>
           <div className={styles.jobHistory}>
-            <div className={styles.currentJob}>
-              <h3 className={styles.currentJobTitle}>
-                {currentJob.company} - {currentJob.title}
-              </h3>
-              <p className={styles.currentJobDates}>{currentJob.dates}</p>
-              <p className={styles.currentJobText}>{currentJob.text}</p>
-            </div>
+            <FadeIn>
+              <div className={styles.currentJob}>
+                <FadeIn>
+                  <h3 className={styles.currentJobTitle}>
+                    {currentJob.company} - {currentJob.title}
+                  </h3>
+                </FadeIn>
+                <FadeIn>
+                  <p className={styles.currentJobDates}>{currentJob.dates}</p>
+                </FadeIn>
+                <FadeIn>
+                  <p className={styles.currentJobText}>{currentJob.text}</p>
+                </FadeIn>
+              </div>
+            </FadeIn>
             {pastJobs.map((job) => (
               <div className={styles.pastJob} key={job.title}>
-                <h3 className={styles.pastJobTitle}>
-                  <Tag>{job.company}</Tag> {job.title}
-                </h3>
-                <p className={styles.pastJobDates}>{job.dates}</p>
-                <p className={styles.pastJobText}>{job.text}</p>
+                <FadeIn>
+                  <h3 className={styles.pastJobTitle}>
+                    <Tag>{job.company}</Tag> {job.title}
+                  </h3>
+                </FadeIn>
+                <FadeIn>
+                  <p className={styles.pastJobDates}>{job.dates}</p>
+                </FadeIn>
+                <FadeIn>
+                  <p className={styles.pastJobText}>{job.text}</p>
+                </FadeIn>
               </div>
             ))}
           </div>

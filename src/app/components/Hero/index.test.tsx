@@ -9,7 +9,12 @@ describe("Hero", () => {
     render(<Hero />)
 
     // Assert
-    expect(screen.getByText("Hi, I’m Blake Tarter")).toBeInTheDocument()
+    expect(
+      screen.getByText((_, element) => {
+        if (element?.textContent === "Hi, I’mBlake Tarter") return true
+        return false
+      }),
+    ).toBeInTheDocument()
     expect(
       screen.getByText("A Kansas City Based Typescript Developer"),
     ).toBeInTheDocument()

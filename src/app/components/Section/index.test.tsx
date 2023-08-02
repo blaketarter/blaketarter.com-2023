@@ -30,7 +30,7 @@ describe("Section", () => {
     expect(screen.getByTestId("test-section")).toHaveClass(className)
   })
 
-  it("Optionally chnages element", () => {
+  it("Optionally changes element", () => {
     // Arrange
     const children = "Test children"
     const element = "aside"
