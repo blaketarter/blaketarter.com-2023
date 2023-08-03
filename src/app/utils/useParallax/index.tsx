@@ -16,7 +16,6 @@ export default function useParallax<T extends HTMLElement | null>(
   ref: MutableRefObject<T>,
   options?: UseParallaxOptions,
 ) {
-  const offset = useRef(0)
   const parrallaxOptions = useMemo(
     () => ({
       offsetMultiplier: 1,
@@ -104,5 +103,5 @@ export default function useParallax<T extends HTMLElement | null>(
     }
   }, [parrallaxOptions?.anchor, parrallaxOptions.offsetMultiplier, ref])
 
-  return offset
+  return null
 }
