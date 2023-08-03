@@ -7,6 +7,11 @@ interface UseParallaxOptions {
 
 const DEFAULT_OFFSET_MULTIPLIER = 0.25
 
+// check for prefers reduced motion
+// check for existence of intersectionobserver, getBoundingClientRect, and raf
+// investigate perf
+// investigate cross browser
+
 export default function useParallax<T extends HTMLElement | null>(
   ref: MutableRefObject<T>,
   options?: UseParallaxOptions,
@@ -40,26 +45,42 @@ export default function useParallax<T extends HTMLElement | null>(
 
     const element = ref.current
 
-    function onScroll(e: Event) {
+    let animationFrame: number | null = null
+
+    function calculateParallax() {
       if (!element) {
         return
       }
 
-      const refY = element.getBoundingClientRect().y
-      const diff = (refY - anchorHeight) * offsetAmount
+      if (animationFrame !== null) {
+        console.log("another frame")
+        window.cancelAnimationFrame(animationFrame)
+      }
 
-      element.style.transform = `translateY(${diff}px)`
+      animationFrame = window.requestAnimationFrame(() => {
+        const refY = element.getBoundingClientRect().y
+        const diff = (refY - anchorHeight) * offsetAmount
+
+        element.style.transform = `translateY(${diff}px)`
+
+        animationFrame = null
+      })
+    }
+
+    function onScroll(e: Event) {
+      calculateParallax()
     }
 
     const observer = new IntersectionObserver((entries) => {
       if (entries[0].isIntersecting) {
-        // console.log("intersecting")
+        console.log("intersecting")
         if (element) {
           element.style.willChange = `transform`
+          calculateParallax()
           window.addEventListener("scroll", onScroll, { passive: true })
         }
       } else {
-        // console.log("not intersecting")
+        console.log("not intersecting")
         if (element) {
           element.style.willChange = `unset`
         }
@@ -74,6 +95,9 @@ export default function useParallax<T extends HTMLElement | null>(
     return () => {
       if (element) {
         element.style.willChange = `unset`
+      }
+      if (animationFrame !== null) {
+        window.cancelAnimationFrame(animationFrame)
       }
       window.removeEventListener("scroll", onScroll)
       observer.disconnect()
