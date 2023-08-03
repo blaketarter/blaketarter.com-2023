@@ -3,6 +3,7 @@ import Section from "../Section"
 import SectionTitle from "../SectionTitle"
 import Tag from "../Tag"
 import styles from "./index.module.css"
+import Patterns from "./patterns"
 
 async function getJobs() {
   return [
@@ -51,8 +52,7 @@ export default async function History() {
   const pastJobs = jobs.slice(1)
   return (
     <section className={styles.historyTransition}>
-      <div className={styles.historyTransitionBackground3} />
-      <div className={styles.historyTransitionBackground2} />
+      <Patterns />
       <Section className={styles.historyWrapper} element="div">
         <>
           <FadeIn>
