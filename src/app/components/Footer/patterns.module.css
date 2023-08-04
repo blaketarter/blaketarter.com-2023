@@ -1,0 +1,10 @@
+.footerBackground {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  color: var(--color-secondary);
+  background-image: repeating-linear-gradient(135deg, currentColor, currentColor 4px, transparent 0, transparent 50%);
+  background-size: 30px 30px;
+  background-color: var(--color-primary);
+  clip-path: polygon(100% 0px, 100% 100%, 100% 100%, 0px 100%, 0px 80px);
+}

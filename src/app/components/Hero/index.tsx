@@ -1,12 +1,11 @@
 import FadeIn from "../FadeIn"
 import styles from "./index.module.css"
+import Patterns from "./patterns"
 
 export default function Hero() {
   return (
     <section className={styles.heroContainer}>
-      <div className={styles.heroBackground3} />
-      <div className={styles.heroBackground2} />
-      <div className={styles.heroBackground1} />
+      <Patterns />
       <div className={styles.heroText}>
         <h1 className={styles.headline}>
           <FadeIn delay={250} element="span">
