@@ -7,9 +7,6 @@ interface UseParallaxOptions {
 
 const DEFAULT_OFFSET_MULTIPLIER = 0.25
 
-// check for prefers reduced motion
-// check for existence of intersectionobserver, getBoundingClientRect, and raf
-// investigate perf
 // investigate cross browser
 
 export default function useParallax<T extends HTMLElement | null>(
@@ -27,6 +24,20 @@ export default function useParallax<T extends HTMLElement | null>(
 
   useEffect(() => {
     if (!ref.current) {
+      return
+    }
+
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion)")
+    if (prefersReducedMotion.matches) {
+      return
+    }
+
+    const supported =
+      typeof window !== "undefined" &&
+      "IntersectionObserver" in window &&
+      "requestAnimationFrame" in window
+
+    if (!supported) {
       return
     }
 
@@ -60,7 +71,7 @@ export default function useParallax<T extends HTMLElement | null>(
         const refY = element.getBoundingClientRect().y
         const diff = (refY - anchorHeight) * offsetAmount
 
-        element.style.transform = `translateY(${diff}px)`
+        element.style.transform = `translate3d(0, ${diff}px, 0)`
 
         animationFrame = null
       })
@@ -72,14 +83,12 @@ export default function useParallax<T extends HTMLElement | null>(
 
     const observer = new IntersectionObserver((entries) => {
       if (entries[0].isIntersecting) {
-        console.log("intersecting")
         if (element) {
           element.style.willChange = `transform`
           calculateParallax()
           window.addEventListener("scroll", onScroll, { passive: true })
         }
       } else {
-        console.log("not intersecting")
         if (element) {
           element.style.willChange = `unset`
         }
