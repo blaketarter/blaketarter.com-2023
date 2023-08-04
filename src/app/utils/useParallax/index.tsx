@@ -7,8 +7,6 @@ interface UseParallaxOptions {
 
 const DEFAULT_OFFSET_MULTIPLIER = 0.25
 
-// investigate cross browser
-
 export default function useParallax<T extends HTMLElement | null>(
   ref: MutableRefObject<T>,
   options?: UseParallaxOptions,
