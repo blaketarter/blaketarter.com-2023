@@ -7,9 +7,8 @@
   justify-content: center;
   flex-direction: row;
   z-index: 1;
-
   display: none;
-      visibility: hidden;
+  visibility: hidden;
 }
 
 @media screen and (min-width: 600px) {
