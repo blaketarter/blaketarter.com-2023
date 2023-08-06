@@ -25,8 +25,12 @@ export default function useParallax<T extends HTMLElement | null>(
       return
     }
 
-    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion)")
-    if (prefersReducedMotion.matches) {
+    const prefersReducedMotion =
+      typeof window !== "undefined" &&
+      "matchMedia" in window &&
+      window.matchMedia("(prefers-reduced-motion)").matches
+
+    if (prefersReducedMotion) {
       return
     }
 

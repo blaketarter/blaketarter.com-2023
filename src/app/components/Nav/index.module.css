@@ -1,0 +1,41 @@
+.navWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  z-index: 1;
+
+  display: none;
+      visibility: hidden;
+}
+
+@media screen and (min-width: 600px) {
+  .navWrapper {
+      display: flex;
+      visibility: visible;
+  }
+}
+
+.navInner {
+  margin: 0 var(--base-margin);
+  margin-top: 20px;
+  max-width: var(--max-width);
+  width: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.navItem {
+  margin-left: 40px;
+  font-weight: 700;
+}
+
+.navLink {
+  color: var(--color-white);
+  text-decoration: none;
+}

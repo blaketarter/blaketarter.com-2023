@@ -28,7 +28,7 @@ async function getLinks() {
 export default async function FindMe() {
   const links = await getLinks()
   return (
-    <Section className={styles.findWrapper}>
+    <Section className={styles.findWrapper} id="find">
       <>
         <FadeIn>
           <SectionTitle>Find me on the Internet</SectionTitle>
