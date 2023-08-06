@@ -5,11 +5,13 @@ import Hero from "./components/Hero"
 import History from "./components/History"
 import Nav from "./components/Nav"
 import Work from "./components/Work"
+import FadeInNoScript from "./components/FadeIn/noscript"
 import styles from "./page.module.css"
 
 export default function Home() {
   return (
     <div className={styles.app}>
+      <FadeInNoScript />
       <Nav />
       <Hero />
       <main className={styles.main}>

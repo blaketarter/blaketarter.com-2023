@@ -62,7 +62,7 @@ export default function FadeIn({
   return (
     <Element
       ref={domRef}
-      className={classNames(styles.initialState, className, {
+      className={classNames("FadeIn", styles.initialState, className, {
         [styles.disabled]: disabled,
         [styles.isVisible]: isVisible,
         [styles.isSpan]: element === "span",
