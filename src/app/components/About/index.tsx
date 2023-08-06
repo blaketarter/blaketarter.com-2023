@@ -37,7 +37,7 @@ async function getTechs() {
 export default async function About() {
   const techs = await getTechs()
   return (
-    <Section>
+    <Section id="about">
       <>
         <FadeIn>
           <SectionTitle>About Me</SectionTitle>

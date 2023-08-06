@@ -51,7 +51,7 @@ export default async function History() {
   const currentJob = jobs[0]
   const pastJobs = jobs.slice(1)
   return (
-    <section className={styles.historyTransition}>
+    <section className={styles.historyTransition} id="history">
       <Patterns />
       <Section className={styles.historyWrapper} element="div">
         <>

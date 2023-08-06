@@ -4,7 +4,7 @@ import Patterns from "./patterns"
 
 export default function Hero() {
   return (
-    <section className={styles.heroContainer}>
+    <section className={styles.heroContainer} id="top">
       <Patterns />
       <div className={styles.heroText}>
         <h1 className={styles.headline}>
