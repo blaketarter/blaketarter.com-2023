@@ -11,13 +11,13 @@ async function getJobs() {
       company: "Crema",
       title: "Senior Application Developer",
       dates: "Dec 2019 - Present",
-      text: "During this role I helped build web and mobile applications as a member of the production team while also helping mentor and give direction to the development team as a whole. As a Senior developer I'm expected to have wide areas of expertise and be able to advise the development direction of projects.",
+      text: "In this role I helped build web and mobile applications as a member of the production team while also helping mentor and give direction to the development team as a whole. As a Senior developer I'm expected to have wide areas of expertise and be able to advise the development direction of projects.",
     },
     {
       company: "Crema",
       title: "Application Developer",
       dates: "Sep 2016 - Dec 2019",
-      text: "While in this role I developed, implemented, and updated software solutions for web and mobile applications.",
+      text: "While in this role I developed, implemented, and updated software solutions for web and mobile applications. I gained a lot of experience working in a cross-functional team and grew as a developer while working with other talented devs.",
     },
     {
       company: "Code Koalas",
@@ -29,13 +29,13 @@ async function getJobs() {
       company: "Code Koalas",
       title: "Web Developer",
       dates: "Aug 2014 - Sep 2016",
-      text: "I was on the team that developed web sites using HTML, CSS, Javascript, PHP, Drupal.",
+      text: "I was on the team that developed web sites using HTML, CSS, Javascript, PHP, and Drupal.",
     },
     {
       company: "The Briefcase",
       title: "UX Engineer",
       dates: "May 2014 - Aug 2014",
-      text: "I developed and integrated the front-end of Briefcase with the back-end and also made design/usability decisions. I focused on HTML/CSS/JS but also tended to use PHP to do my job.",
+      text: "I developed and integrated the front-end of Briefcase with the back-end and also made design/usability decisions. I focused on HTML/CSS/JS but occasionally used PHP.",
     },
     {
       company: "The Briefcase",

@@ -61,7 +61,7 @@ export default async function About() {
               <br />
               I&apos;m a TypeScript developer with over nine years of experience
               planning, creating, and maintaining various types of apps and
-              websites. My current weapons of choice include React, Redux,
+              websites. My current weapons of choice include React, Next,
               TypeScript, and Node. I spend my days building enterprise-grade
               web apps, consumer facing websites, and mobile apps. I kick back
               on my nights and weekends by honing my skills and working on

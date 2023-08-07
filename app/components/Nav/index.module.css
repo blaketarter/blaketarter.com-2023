@@ -11,7 +11,7 @@
   visibility: hidden;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 1000px) {
   .navWrapper {
       display: flex;
       visibility: visible;
