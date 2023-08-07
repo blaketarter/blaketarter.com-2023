@@ -2,7 +2,7 @@
 
 import { useRef } from "react"
 import styles from "./patterns.module.css"
-import useParallax from "@/app/utils/useParallax"
+import useParallax from "../../utils/useParallax"
 
 export default function Patterns() {
   const patternRef = useRef<HTMLDivElement | null>(null)

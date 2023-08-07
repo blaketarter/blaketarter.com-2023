@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react"
 import FindMe from "."
-import { resolvedComponent } from "@/app/utils/testUtils"
+import { resolvedComponent } from "../../utils/testUtils"
 
 describe("FindMe", () => {
   it("Renders correctly", async () => {

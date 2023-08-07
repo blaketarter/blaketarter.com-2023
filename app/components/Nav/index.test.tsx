@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react"
 import Nav from "."
-import { resolvedComponent } from "@/app/utils/testUtils"
+import { resolvedComponent } from "../../utils/testUtils"
 
 describe("Nav", () => {
   it("Renders correctly", async () => {
