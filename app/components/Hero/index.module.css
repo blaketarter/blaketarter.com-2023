@@ -1,6 +1,6 @@
 .heroContainer {
     display: flex;
-    height: 60vh;
+    height: 80vh;
     width: 100%;
     position: relative;
     margin: 0 auto;
@@ -8,23 +8,22 @@
     flex-direction: row;
 }
 
-@media screen and (min-width: 600px) {
-    .heroContainer {
-        height: 50vh;
-    }
-}
-
-@media screen and (min-width: 1000px) {
-    .heroContainer {
-        height: 70vh;
-    }
-}
-
 .heroText {
     position: relative;
     margin: var(--base-margin);
     max-width: var(--max-width);
     width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 70%;
+}
+
+@media screen and (min-width: 600px) {
+    .heroText {
+        height: 60%;
+    }
 }
 
 .headline {
