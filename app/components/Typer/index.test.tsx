@@ -1,7 +1,7 @@
 import { jest } from "@jest/globals"
 import { render, screen } from "@testing-library/react"
 import Typer from "."
-import { waitForX } from "@/app/utils/testUtils"
+import { waitForX } from "../../utils/testUtils"
 
 describe("Typer", () => {
   // low priority animation timings can be a bit flaky

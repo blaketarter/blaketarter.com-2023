@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react"
 import History from "."
-import { resolvedComponent } from "@/app/utils/testUtils"
+import { resolvedComponent } from "../../utils/testUtils"
 
 describe("History", () => {
   it("Renders correctly", async () => {
