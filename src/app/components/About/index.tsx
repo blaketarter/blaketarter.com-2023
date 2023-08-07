@@ -59,7 +59,7 @@ export default async function About() {
               Hi, I&apos;m Blake 👋
               <br />
               <br />
-              I&apos;m a TypeScript developer with over six years of experience
+              I&apos;m a TypeScript developer with over nine years of experience
               planning, creating, and maintaining various types of apps and
               websites. My current weapons of choice include React, Redux,
               TypeScript, and Node. I spend my days building enterprise-grade
@@ -87,7 +87,7 @@ export default async function About() {
           <FadeIn delay={250}>
             <p className={styles.knowSubtext}>
               I don&apos;t want to toot my own horn, but I do know a little
-              something about these (toot-toot 🚂):
+              something about these:
             </p>
           </FadeIn>
         </div>

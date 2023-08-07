@@ -65,7 +65,6 @@ export default function useParallax<T extends HTMLElement | null>(
       }
 
       if (animationFrame !== null) {
-        console.log("another frame")
         window.cancelAnimationFrame(animationFrame)
       }
 

@@ -15,3 +15,7 @@
 .footer {
     width: 100%;
 }
+
+.blueSection {
+    background: var(--color-secondary);
+}

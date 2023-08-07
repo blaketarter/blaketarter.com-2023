@@ -17,8 +17,10 @@ export default function Home() {
       <main className={styles.main}>
         <About />
         <History />
-        <Work />
-        <FindMe />
+        <div className={styles.blueSection}>
+          <Work />
+          <FindMe />
+        </div>
       </main>
       <footer className={styles.footer}>
         <Footer />
