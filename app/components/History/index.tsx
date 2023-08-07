@@ -11,7 +11,7 @@ async function getJobs() {
       company: "Crema",
       title: "Senior Application Developer",
       dates: "Dec 2019 - Present",
-      text: "During this role I help build web and mobile applications as a member of the production team while also helping mentor and give direction to the development team as a whole. As a Senior developer I'm expected to have wide areas of expertise and be able to advise the development direction of projects.",
+      text: "During this role I helped build web and mobile applications as a member of the production team while also helping mentor and give direction to the development team as a whole. As a Senior developer I'm expected to have wide areas of expertise and be able to advise the development direction of projects.",
     },
     {
       company: "Crema",
