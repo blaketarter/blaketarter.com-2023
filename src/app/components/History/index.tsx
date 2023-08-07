@@ -11,7 +11,7 @@ async function getJobs() {
       company: "Crema",
       title: "Senior Application Developer",
       dates: "Dec 2019 - Present",
-      text: "During this role I help build web and mobile applications as a member of the production team while also helping mentor and give direction to the development team as a whole. As a Senior developer I'm expected to have areas of expertise and be able to advise the development direction of projects.",
+      text: "During this role I help build web and mobile applications as a member of the production team while also helping mentor and give direction to the development team as a whole. As a Senior developer I'm expected to have wide areas of expertise and be able to advise the development direction of projects.",
     },
     {
       company: "Crema",
@@ -73,9 +73,9 @@ export default async function History() {
               myriad of different technologies, frameworks, and methodologies
               I&apos;ve built everything from web applications to marketing
               websites, hybrid and native applications, and then back again.
-              Currently I happily find myself working on web and native
-              applications using React and TypeScript as well as the occasional
-              freelance website.
+              Currently I find myself working on web and native applications
+              using React and TypeScript as well as the occasional freelance
+              website.
             </p>
           </FadeIn>
           <div className={styles.jobHistory}>

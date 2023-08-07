@@ -9,7 +9,7 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   title: "blaketarter.com | TypeScript Developer based in Kansas City, MO",
   description:
-    "I'm a TypeScript developer with over seven years of experience planning, creating, and maintaining various types of apps and websites.",
+    "I'm a TypeScript developer with over nine years of experience planning, creating, and maintaining various types of apps and websites.",
   keywords:
     "typescript, javascript, developer, dev, web, font-end, website, kansas city, react, node, programmer",
 }
