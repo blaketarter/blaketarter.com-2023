@@ -1,6 +1,13 @@
-.initialState {
+.initialState.up {
   opacity: 0;
   transform: translateY(40px);
+  transition: opacity 0s, transform 0s;
+  will-change: opacity, transform;
+}
+
+.initialState.down {
+  opacity: 0;
+  transform: translateY(-40px);
   transition: opacity 0s, transform 0s;
   will-change: opacity, transform;
 }
@@ -12,7 +19,7 @@
   will-change: auto;
 }
 
-.isVisible {
+.initialState.isVisible {
   opacity: 1;
   transform: none;
   transition: opacity 400ms ease-out, transform 400ms ease-out;

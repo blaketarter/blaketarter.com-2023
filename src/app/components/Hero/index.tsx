@@ -31,7 +31,7 @@ export default function Hero() {
         </FadeIn>
       </div>
       <div className={styles.arrowDownContainer}>
-        <FadeIn delay={2000}>
+        <FadeIn delay={2500} direction="down">
           <ScrollLink href="#about">
             <Tag className={styles.arrowDown}>↓</Tag>
           </ScrollLink>

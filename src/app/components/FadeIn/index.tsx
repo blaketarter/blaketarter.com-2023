@@ -10,6 +10,7 @@ interface FadeInProps {
   delay?: number
   element?: JSX.ElementType
   rootMargin?: string
+  direction?: "up" | "down"
 }
 
 export default function FadeIn({
@@ -18,6 +19,7 @@ export default function FadeIn({
   delay = 0,
   element = "div",
   rootMargin = "0px 0px -10% 0px",
+  direction = "up",
 }: FadeInProps) {
   const domRef = useRef<HTMLElement | null>(null)
 
@@ -66,6 +68,8 @@ export default function FadeIn({
         [styles.disabled]: disabled,
         [styles.isVisible]: isVisible,
         [styles.isSpan]: element === "span",
+        [styles.up]: direction === "up",
+        [styles.down]: direction === "down",
       })}
     >
       {children}
