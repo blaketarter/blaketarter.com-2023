@@ -18,10 +18,6 @@ async function getLinks() {
       name: "Codepen",
       url: "https://codepen.io/blaketarter/",
     },
-    {
-      name: "NPM",
-      url: "https://twitter.com/itsblaketarter",
-    },
   ]
 }
 
