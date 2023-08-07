@@ -13,7 +13,7 @@ const onClick = (e: MouseEvent<HTMLAnchorElement>, href: string) => {
 
   if (el && el.scrollIntoView) {
     e.preventDefault()
-    el.scrollIntoView({ behavior: "smooth" })
+    el.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "start" })
   }
 }
 
