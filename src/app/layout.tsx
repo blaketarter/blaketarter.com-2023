@@ -11,7 +11,12 @@ export const metadata: Metadata = {
   description:
     "I'm a TypeScript developer with over nine years of experience planning, creating, and maintaining various types of apps and websites.",
   keywords:
-    "typescript, javascript, developer, dev, web, font-end, website, kansas city, react, node, programmer",
+    "typescript, javascript, developer, dev, web, font-end, website, kansas city, react, nextjs, node, programmer",
+  icons: {
+    icon: "/favicon-32x32.png",
+    apple: "/apple-icon.png",
+  },
+  themeColor: "#164BB3",
 }
 
 export default function RootLayout({
