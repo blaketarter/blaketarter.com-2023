@@ -1,0 +1,88 @@
+name: Lighthouse Audit
+
+on:
+  issue_comment:
+    types: [edited]
+
+jobs:
+  generate_lighthouse_audit:
+    timeout-minutes: 30
+    runs-on: ubuntu-latest
+    steps:
+      - name: Add comment to PR
+        id: loading_comment_to_pr
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          number: ${{ github.event.issue.number }}
+          header: lighthouse
+          message: |
+            Running Lighthouse audit...
+      - name: Capture Vercel preview URL
+        id: vercel_preview_url
+        uses: aaimio/vercel-preview-url-action@v2.2.0
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/checkout@v2
+      - name: Audit preview URL with Lighthouse
+        id: lighthouse_audit
+        uses: treosh/lighthouse-ci-action@v3
+        with:
+          urls: |
+            ${{ steps.vercel_preview_url.outputs.vercel_preview_url }}
+            https://blaketarter-com-2023.vercel.app/
+          uploadArtifacts: true
+          temporaryPublicStorage: true
+          runs: 3
+      - name: Format lighthouse score
+        id: format_lighthouse_score
+        uses: actions/github-script@v3
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            const result = ${{ steps.lighthouse_audit.outputs.manifest }}
+              .filter(manifest => manifest.url === '${{ steps.vercel_preview_url.outputs.vercel_preview_url }}/')
+              .reduce((acc, curr, index, arr) => {
+                Object.keys(acc).forEach(key => acc[key] = acc[key] + (curr.summary[key] / arr.length))
+                return acc
+              }, { performance: 0, accessibility: 0, 'best-practices': 0, seo: 0, pwa: 0 })
+
+            const resultBase = ${{ steps.lighthouse_audit.outputs.manifest }}
+              .filter(manifest => manifest.url === 'https://blaketarter-com-2023.vercel.app/')
+              .reduce((acc, curr, index, arr) => {
+                Object.keys(acc).forEach(key => acc[key] = acc[key] + (curr.summary[key] / arr.length))
+                return acc
+              }, { performance: 0, accessibility: 0, 'best-practices': 0, seo: 0, pwa: 0 })
+
+            const links = ${{ steps.lighthouse_audit.outputs.links }}
+            const formatResult = (res) => Math.round((res * 100))
+            Object.keys(result).forEach(key => result[key] = formatResult(result[key]))
+            Object.keys(resultBase).forEach(key => resultBase[key] = formatResult(resultBase[key]))
+            const score = res => res >= 90 ? '🟢' : res >= 50 ? '🟠' : '🔴'
+            const delta = (newRes, baseRes) => {
+              const diff = newRes - baseRes
+              return `${diff > 0 ? '👍 +' : diff < 0 ? '👎 -' : ''}${Math.abs(diff)}`
+            }
+            const comment = [
+                `⚡️ [Lighthouse report](${Object.values(links)[0]}) for the changes in this PR:`,
+                '| Category | Score | Delta',
+                '| --- | --- | --- |',
+                `| ${score(result.performance)} Performance | ${result.performance} | ${delta(result.performance, resultBase.performance)} |`,
+                `| ${score(result.accessibility)} Accessibility | ${result.accessibility} | ${delta(result.accessibility, resultBase.accessibility)} |`,
+                `| ${score(result['best-practices'])} Best practices | ${result['best-practices']} | ${delta(result['best-practices'], resultBase['best-practices'])} |`,
+                `| ${score(result.seo)} SEO | ${result.seo} | ${delta(result.seo, resultBase.seo)} |`,
+                `| ${score(result.pwa)} PWA | ${result.pwa} | ${delta(result.pwa, resultBase.pwa)} |`,
+                ' ',
+                `*Lighthouse ran on [${Object.keys(links)[0]}](${Object.keys(links)[0]})*`,
+                `*Delta based on [${Object.keys(links)[1]}](${Object.keys(links)[1]}) [(Lighthouse report)](${Object.values(links)[1]})*`
+            ].join('\n')
+             core.setOutput("comment", comment);
+      - name: Add comment to PR
+        id: comment_to_pr
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          number: ${{ github.event.issue.number }}
+          header: lighthouse
+          message: |
+            ${{ steps.format_lighthouse_score.outputs.comment }}
