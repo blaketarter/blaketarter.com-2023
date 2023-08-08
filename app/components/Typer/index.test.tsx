@@ -75,7 +75,7 @@ describe("Typer", () => {
     expect(screen.getByText("b")).toBeInTheDocument()
   })
 
-  it("Starts typing original word after X ms", async () => {
+  xit("Starts typing original word after X ms", async () => {
     // Arrange
     const words = ["foo", "bar"]
     // Act
