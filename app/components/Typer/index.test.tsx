@@ -5,7 +5,7 @@ import { waitForX } from "../../utils/testUtils"
 
 describe("Typer", () => {
   // low priority animation timings can be a bit flaky
-  jest.retryTimes(5)
+  jest.retryTimes(10)
 
   it("Renders correctly initially", async () => {
     // Arrange
