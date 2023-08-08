@@ -43,7 +43,7 @@ jobs:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
             const result = ${{ steps.lighthouse_audit.outputs.manifest }}
-              .filter(manifest => manifest.url === '${{ steps.vercel_preview_url.outputs.vercel_preview_url }}/')
+              .filter(manifest => manifest.url === '${{ steps.vercel_preview_url.outputs.vercel_preview_url }}')
               .reduce((acc, curr, index, arr) => {
                 Object.keys(acc).forEach(key => acc[key] = acc[key] + (curr.summary[key] / arr.length))
                 return acc
