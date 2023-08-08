@@ -1,34 +1,22 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Hi there, thanks for checking out my website 👋
 
-## Getting Started
+Check it out in production here: [blaketarter.com](https://blaketarter.com)
 
-First, run the development server:
+This website was built with [Next](https://nextjs.org/) and [TypeScript](https://www.typescriptlang.org/). It's intentionally over-engineered for a simple one-page website. I like to use my personal website as a playground for new technologies or new ideas. Sometimes simply to show off stuff that I know how to do.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+There is a suite of tests that run in GitHub Actions (and can be ran locally) including:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Unit tests using [Jest](https://jestjs.io/) and [Testing Library](https://testing-library.com/)
+- Linting with [Eslint](https://eslint.org/) and [Prettier](https://prettier.io/)
+- Type checking with [TypeScript](https://www.typescriptlang.org/)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The site can be exported as a static site that should run as expected and look fine even with JavaScript disabled in the browser.
+To build and run the site in dev mode you can run `npm run dev`. You can also build the production version with `npm run build` and then start it with `npm run start`.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+A few of the features that were built custom into this site are:
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- A light/dark theme based on the OS `prefers-color-scheme`
+- CSS variables used to define theme that change based on `@media` queries
+- On-scroll fade-in animations for elements that respects `prefers-reduced-motion`
+- On-scroll parallax effects that also respects `prefers-reduced-motion`
+- A complicated `Typer` component that shows off usage of hooks (including `useTransition`)
