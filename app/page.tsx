@@ -7,10 +7,12 @@ import Nav from "./components/Nav"
 import Work from "./components/Work"
 import FadeInNoScript from "./components/FadeIn/noscript"
 import styles from "./page.module.css"
+import LighthouseFix from "./components/LighthouseFix"
 
 export default function Home() {
   return (
     <div className={styles.app}>
+      <LighthouseFix />
       <FadeInNoScript />
       <Nav />
       <Hero />
