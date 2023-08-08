@@ -25,7 +25,7 @@ jobs:
         uses: aaimio/vercel-preview-url-action@v2.2.0
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Audit preview URL with Lighthouse
         id: lighthouse_audit
         uses: treosh/lighthouse-ci-action@v10
@@ -38,7 +38,7 @@ jobs:
           runs: 3
       - name: Format lighthouse score
         id: format_lighthouse_score
-        uses: actions/github-script@v3
+        uses: actions/github-script@v6
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
