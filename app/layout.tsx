@@ -13,8 +13,8 @@ export const metadata: Metadata = {
   keywords:
     "typescript, javascript, developer, dev, web, font-end, website, kansas city, react, nextjs, node, programmer",
   icons: {
-    icon: "/favicon-32x32.png",
-    apple: "/apple-icon.png",
+    icon: "favicon-32x32.png",
+    apple: "apple-icon.png",
   },
 }
 

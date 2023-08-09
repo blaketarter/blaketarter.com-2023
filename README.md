@@ -20,3 +20,6 @@ A few of the features that were built custom into this site are:
 - On-scroll fade-in animations for elements that respects `prefers-reduced-motion`
 - On-scroll parallax effects that also respects `prefers-reduced-motion`
 - A complicated `Typer` component that shows off usage of hooks (including `useTransition`)
+- Tests ran in CI using Github Actions
+- Automatically test PRs against the main deployment using [Google Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/)
+- Automatic deployments to GitHub Pages using CI

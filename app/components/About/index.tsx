@@ -47,7 +47,7 @@ export default async function About() {
             <div className={styles.imageWrapper}>
               <div className={styles.imageBackground} />
               <Image
-                src="/me.jpg"
+                src="me.jpg"
                 alt="Picture of Blake smiling"
                 fill={true}
                 className={styles.image}
