@@ -17,7 +17,7 @@ describe("History", () => {
       ),
     ).toBeInTheDocument()
     expect(
-      screen.getByText("Crema - Senior Application Developer"),
+      screen.getByText("Crema - Application Developer III"),
     ).toBeInTheDocument()
   })
 })

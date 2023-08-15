@@ -9,8 +9,14 @@ async function getJobs() {
   return [
     {
       company: "Crema",
+      title: "Application Developer III",
+      dates: "Aug 2021 - Present",
+      text: "As an Application Developer III I am expected to lead both the technical planning and development phases of the project. I help make decisions on the tech stack used for the project as well as function as part of the larger development team. As a senior member of the team I assist the team in working through issues and ensure the highest quality and correctness.",
+    },
+    {
+      company: "Crema",
       title: "Senior Application Developer",
-      dates: "Dec 2019 - Present",
+      dates: "Dec 2019 - Aug 2021",
       text: "In this role I helped build web and mobile applications as a member of the production team while also helping mentor and give direction to the development team as a whole. As a Senior developer I'm expected to have wide areas of expertise and be able to advise the development direction of projects.",
     },
     {
