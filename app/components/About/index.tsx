@@ -21,16 +21,22 @@ async function getTechs() {
     { name: "TailwindCSS" },
     { name: "Material UI" },
     { name: "React Query" },
+    { name: "Redux" },
     { name: "Python" },
+    { name: "Pytest" },
     { name: "Docker" },
     { name: "Azure" },
     { name: "FastAPI" },
     { name: "Express" },
     { name: "Node.js" },
+    { name: "React-Native" },
     { name: "REST" },
     { name: "CSS3" },
     { name: "HTML5" },
+    { name: "Jest" },
     { name: "JavaScript" },
+    { name: "Cypress" },
+    { name: "Git" },
   ]
 }
 
