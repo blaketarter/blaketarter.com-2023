@@ -4,3 +4,46 @@
     padding-top: 80px;
     margin-top: 0;
 }
+
+.imageWrapper {
+    grid-area: image;
+    height: 110px;
+    width: 200px;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.imageBackground {
+    background: var(--color-primary);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border-radius: var(--border-radius);
+    transform: translate(1rem, 1rem);
+}
+
+.image {
+    border-radius: var(--border-radius);
+    object-fit: contain;
+}
+
+.workExamples {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: var(--base-margin)
+}
+
+.workDescription {
+    margin-top: 1rem;
+}
+
+.workItem {
+    width: 30%;
+}
+
+.linkHref {
+    margin-top: 0.5rem;
+    color: var(--color-white);
+    display: block;
+}

@@ -12,6 +12,10 @@ const navItems = [
     text: "History",
   },
   {
+    href: "#work",
+    text: "Work",
+  },
+  {
     href: "#find",
     text: "Find",
   },
