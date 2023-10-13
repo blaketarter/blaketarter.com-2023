@@ -7,10 +7,10 @@
 
 .imageWrapper {
     grid-area: image;
-    height: 110px;
-    width: 200px;
+    height: 150px;
+    width: 260px;
     position: relative;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
 }
 
 .imageBackground {
@@ -29,9 +29,10 @@
 
 .workExamples {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
-    margin-top: var(--base-margin)
+    margin-top: 80px;
+    padding: 0 2rem;
 }
 
 .workDescription {
@@ -39,11 +40,26 @@
 }
 
 .workItem {
-    width: 30%;
+    width: 100%;
+    margin-bottom: 80px;
 }
 
 .linkHref {
     margin-top: 0.5rem;
     color: var(--color-white);
     display: block;
+}
+
+@media screen and (min-width: 1000px) {
+    .workExamples {
+        flex-direction: row;
+        gap: 2rem;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .imageWrapper {
+        height: 170px;
+        width: 300px;
+    }
 }
