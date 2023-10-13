@@ -74,10 +74,10 @@ export default async function About() {
               passion projects.
               <br />
               <br />
-              Currently I work at Crema, a product agency that partners with
-              funded startups and existing brands to create technology solutions
-              and new digital ventures. I also do some freelance work in my
-              spare time with Midwestern Originals.
+              Currently I&apos;m open to new opportunities in web and
+              application development. Feel free to reach out to me if you have
+              any need for a TypeScript developer who loves to learn and stay on
+              the cutting-edge of the industry.
             </p>
           </FadeIn>
         </div>

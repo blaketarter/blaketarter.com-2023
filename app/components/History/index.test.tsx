@@ -16,8 +16,6 @@ describe("History", () => {
         /I\'ve had an interesting journey to get me to where I am now./,
       ),
     ).toBeInTheDocument()
-    expect(
-      screen.getByText("Crema - Application Developer III"),
-    ).toBeInTheDocument()
+    expect(screen.getByText("Application Developer III")).toBeInTheDocument()
   })
 })
