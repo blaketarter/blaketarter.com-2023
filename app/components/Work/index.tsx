@@ -60,38 +60,36 @@ export default async function Work() {
               key={example.name}
               delay={250 * i}
             >
-              <div>
-                <div className={styles.imageWrapper}>
-                  <div className={styles.imageBackground} />
-                  <Image
-                    src={example.image}
-                    alt={`Screenshot of ${example.name}`}
-                    fill={true}
-                    className={styles.image}
-                    loading="lazy"
-                  />
-                </div>
-                <Tag element="div">
-                  <p>{example.name}</p>
-                </Tag>
-                <p className={styles.workDescription}>{example.description}</p>
-                <a
-                  className={styles.linkHref}
-                  href={example.liveLink}
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
-                >
-                  Check it out
-                </a>
-                <a
-                  className={styles.linkHref}
-                  href={example.sourceLink}
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
-                >
-                  Look at the source code
-                </a>
+              <div className={styles.imageWrapper}>
+                <div className={styles.imageBackground} />
+                <Image
+                  src={example.image}
+                  alt={`Screenshot of ${example.name}`}
+                  fill={true}
+                  className={styles.image}
+                  loading="lazy"
+                />
               </div>
+              <Tag element="div">
+                <p>{example.name}</p>
+              </Tag>
+              <p className={styles.workDescription}>{example.description}</p>
+              <a
+                className={styles.linkHref}
+                href={example.liveLink}
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+              >
+                Check it out
+              </a>
+              <a
+                className={styles.linkHref}
+                href={example.sourceLink}
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+              >
+                Look at the source code
+              </a>
             </FadeIn>
           ))}
         </div>
