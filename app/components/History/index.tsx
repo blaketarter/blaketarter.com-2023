@@ -5,57 +5,73 @@ import Tag from "../Tag"
 import styles from "./index.module.css"
 import Patterns from "./patterns"
 
-async function getJobs() {
+interface Job {
+  company: string
+  title: string
+  dates: string
+  text: string
+  isCurrent: boolean
+}
+
+async function getJobs(): Promise<Job[]> {
   return [
     {
       company: "Crema",
       title: "Application Developer III",
-      dates: "Aug 2021 - Present",
+      dates: "Aug 2021 - Oct 2023",
       text: "As an Application Developer III I am expected to lead both the technical planning and development phases of the project. I help make decisions on the tech stack used for the project as well as function as part of the larger development team. As a senior member of the team I assist the team in working through issues and ensure the highest quality and correctness.",
+      isCurrent: false,
     },
     {
       company: "Crema",
       title: "Senior Application Developer",
       dates: "Dec 2019 - Aug 2021",
       text: "In this role I helped build web and mobile applications as a member of the production team while also helping mentor and give direction to the development team as a whole. As a Senior developer I'm expected to have wide areas of expertise and be able to advise the development direction of projects.",
+      isCurrent: false,
     },
     {
       company: "Crema",
       title: "Application Developer",
       dates: "Sep 2016 - Dec 2019",
       text: "While in this role I developed, implemented, and updated software solutions for web and mobile applications. I gained a lot of experience working in a cross-functional team and grew as a developer while working with other talented devs.",
+      isCurrent: false,
     },
     {
       company: "Code Koalas",
       title: "Team Lead",
       dates: "Sep 2016 - Nov 2017",
       text: "I lead the team that is the Web/Hybrid Application team at CodeKoalas, we used web technologies such as Javascript, Angular, Ionic, Cordova, React, and React Native to build and launch experiences for clients and consumers on multiple platforms.",
+      isCurrent: false,
     },
     {
       company: "Code Koalas",
       title: "Web Developer",
       dates: "Aug 2014 - Sep 2016",
       text: "I was on the team that developed web sites using HTML, CSS, Javascript, PHP, and Drupal.",
+      isCurrent: false,
     },
     {
       company: "The Briefcase",
       title: "UX Engineer",
       dates: "May 2014 - Aug 2014",
       text: "I developed and integrated the front-end of Briefcase with the back-end and also made design/usability decisions. I focused on HTML/CSS/JS but occasionally used PHP.",
+      isCurrent: false,
     },
     {
       company: "The Briefcase",
       title: "UX Intern",
       dates: "Dec 2013 - May 2014",
       text: "I was a front-end user-experience intern that helped implement the web-app and advised on usability decisions.",
+      isCurrent: false,
     },
   ]
 }
 
 export default async function History() {
   const jobs = await getJobs()
-  const currentJob = jobs[0]
-  const pastJobs = jobs.slice(1)
+  const currentJob = jobs.find((job) => job.isCurrent === true)
+  const pastJobs = jobs.filter((job) => !job.isCurrent)
+
   return (
     <section className={styles.historyTransition} id="history">
       <Patterns />
@@ -85,21 +101,23 @@ export default async function History() {
             </p>
           </FadeIn>
           <div className={styles.jobHistory}>
-            <FadeIn>
-              <div className={styles.currentJob}>
-                <FadeIn>
-                  <h3 className={styles.currentJobTitle}>
-                    {currentJob.company} - {currentJob.title}
-                  </h3>
-                </FadeIn>
-                <FadeIn>
-                  <p className={styles.currentJobDates}>{currentJob.dates}</p>
-                </FadeIn>
-                <FadeIn>
-                  <p className={styles.currentJobText}>{currentJob.text}</p>
-                </FadeIn>
-              </div>
-            </FadeIn>
+            {currentJob ? (
+              <FadeIn>
+                <div className={styles.currentJob}>
+                  <FadeIn>
+                    <h3 className={styles.currentJobTitle}>
+                      {currentJob.company} - {currentJob.title}
+                    </h3>
+                  </FadeIn>
+                  <FadeIn>
+                    <p className={styles.currentJobDates}>{currentJob.dates}</p>
+                  </FadeIn>
+                  <FadeIn>
+                    <p className={styles.currentJobText}>{currentJob.text}</p>
+                  </FadeIn>
+                </div>
+              </FadeIn>
+            ) : null}
             {pastJobs.map((job) => (
               <div className={styles.pastJob} key={job.title}>
                 <FadeIn>
