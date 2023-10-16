@@ -20,7 +20,7 @@ function getExamples() {
       image: "/almost-done.png",
       description:
         "This is mainly a project to play around with some new libraries and some new UI Concepts. Almost Done is a simple Todo style app with the added functionality of assigning due dates and seeing the calendar with upcoming items that are due all in one view.",
-      liveLink: "https://almost-done-lilac.vercel.app",
+      liveLink: "https://almost-done-lilac.vercel.app?demo=true",
       sourceLink: "https://github.com/blaketarter/almost-done",
     },
   ]
