@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  background: var(--color-background-secondary);
+  border-radius: 30px;
+  padding: 2px;
+}
+
+.button {
+  color: var(--font-color);
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  font-size: 20px;
+  border: none;
+  padding: 0;
+  background: transparent;
+
+}
+
+.button.active {
+  background: var(--color-background);
+}
+
+.sun {
+  width: 60%;
+}
+
+.moon {
+  width: 40%;
+}
