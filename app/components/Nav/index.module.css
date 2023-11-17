@@ -23,6 +23,13 @@
   margin-top: 20px;
   max-width: var(--max-width);
   width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.navItems {
+  width: 100%;
   list-style: none;
   display: flex;
   flex-direction: row;
