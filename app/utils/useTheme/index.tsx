@@ -33,7 +33,9 @@ export const useTheme = ({ defaultMode = "no-preference" }: Options = {}) => {
   }, [])
 
   useEffect(() => {
-    const darkModeMatchMedia = matchMedia("(prefers-color-scheme: dark)")
+    const darkModeMatchMedia = window?.matchMedia?.(
+      "(prefers-color-scheme: dark)",
+    ) ?? { matches: false }
 
     if (mode === "no-preference") {
       setModeWrapped(darkModeMatchMedia.matches ? "dark" : "light")
