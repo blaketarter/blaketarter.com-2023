@@ -20,6 +20,9 @@
   --color-primary: var(--color-blue-light);
   --color-secondary: var(--color-blue-dark);
 
+  --pattern: repeating-linear-gradient(135deg, currentColor, currentColor 4px, transparent 0, transparent 50%);
+  --pattern-size: 30px 30px;
+
   font-size: var(--base-rem);
 
   --h1: 4rem;
@@ -105,6 +108,43 @@ body.no-animate {
   --color-foreground: var(--color-black);
   --color-foreground-secondary: var(--color-black-light);
   color-scheme: light;
+}
+
+:root.pattern-dots-large {
+  --pattern: radial-gradient(currentColor 6px, transparent 6px);
+  --pattern-size: 30px 30px;
+}
+
+:root.pattern-dots-small {
+  --pattern: radial-gradient(currentColor 2px, transparent 2px);
+  --pattern-size: 20px 20px;
+}
+
+:root.pattern-lines-large {
+  --pattern: repeating-linear-gradient(135deg, currentColor, currentColor 4px, transparent 0, transparent 50%);
+  --pattern-size: 30px 30px;
+}
+
+:root.pattern-zigzag-large {
+  --pattern: linear-gradient(135deg, currentColor 25%, transparent 25%) -10px 0,
+            linear-gradient(225deg, currentColor 25%, transparent 25%) -10px 0,
+            linear-gradient(315deg, currentColor 25%, transparent 25%),
+            linear-gradient(45deg, currentColor 25%, transparent 25%);
+  --pattern-size: 20px 20px;
+}
+
+:root.pattern-diamond-large {
+  --pattern: linear-gradient(135deg, currentColor 25%, transparent 25%) -20px 0,
+            linear-gradient(225deg, currentColor 25%, transparent 25%) -20px 0,
+            linear-gradient(315deg, currentColor 25%, transparent 25%),
+            linear-gradient(45deg, currentColor 25%, transparent 25%);
+  --pattern-size: 20px 20px;
+}
+
+:root.pattern-waves-large {
+  --pattern: radial-gradient(circle at 100% 50%, transparent 20%, currentColor 21%, 34%, transparent 35%, transparent),
+    radial-gradient(circle at 0% 50%, transparent 20%, currentColor 21%, currentColor 34%, transparent 35%, transparent) 0 -25px;
+  --pattern-size: 37.5px 50px;
 }
 
 p {

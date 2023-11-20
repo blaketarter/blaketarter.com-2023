@@ -17,8 +17,8 @@ const navItems = [
     text: "Work",
   },
   {
-    href: "#find",
-    text: "Find",
+    href: "#contact",
+    text: "Contact",
   },
 ]
 

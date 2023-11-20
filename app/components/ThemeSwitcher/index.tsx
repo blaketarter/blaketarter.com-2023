@@ -2,7 +2,7 @@
 
 import classNames from "classnames"
 import styles from "./index.module.css"
-import { useTheme } from "../../utils/useTheme"
+import useTheme from "../../utils/useTheme"
 
 export default function ThemeSwitcher() {
   const [theme, setTheme] = useTheme()

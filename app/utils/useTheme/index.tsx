@@ -19,7 +19,9 @@ function getOppositeTheme(mode: ThemeMode) {
   }
 }
 
-export const useTheme = ({ defaultMode = "no-preference" }: Options = {}) => {
+export default function useTheme({
+  defaultMode = "no-preference",
+}: Options = {}) {
   const [mode, setMode] = useState<ThemeMode>(defaultMode)
 
   const setModeWrapped = useCallback((mode: ThemeMode) => {
