@@ -12,6 +12,6 @@ describe("Nav", () => {
     expect(screen.getByText("About")).toBeInTheDocument()
     expect(screen.getByText("History")).toBeInTheDocument()
     expect(screen.getByText("Work")).toBeInTheDocument()
-    expect(screen.getByText("Find")).toBeInTheDocument()
+    expect(screen.getByText("Contact")).toBeInTheDocument()
   })
 })

@@ -46,3 +46,12 @@
     background: var(--color-secondary);
     padding: 0.5rem 0.75rem;
 }
+
+.patternButton {
+    background: var(--color-secondary);
+    padding: 0.5rem 0.75rem;
+    color: var(--color-white);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+}
