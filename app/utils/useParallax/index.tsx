@@ -49,8 +49,8 @@ export default function useParallax<T extends HTMLElement | null>(
       parrallaxOptions?.anchor === "top"
         ? 0
         : parrallaxOptions?.anchor === "middle"
-        ? windowHeight / 2
-        : windowHeight
+          ? windowHeight / 2
+          : windowHeight
 
     const offsetAmount =
       parrallaxOptions.offsetMultiplier * DEFAULT_OFFSET_MULTIPLIER
