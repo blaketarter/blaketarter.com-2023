@@ -30,10 +30,10 @@ export default function usePattern() {
         document.documentElement.classList.add(newPattern)
       }
       setPattern(newPattern)
-      if (i < 5) {
+      if (i < 6) {
         setTimeout(
           () => setPatternWrapped(newPattern, limitedPatterns, i + 1),
-          i * 100,
+          i < 5 ? i * 50 : i * 100,
         )
       }
     },
