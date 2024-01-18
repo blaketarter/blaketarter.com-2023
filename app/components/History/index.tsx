@@ -11,6 +11,7 @@ interface Job {
   dates: string
   text: string
   isCurrent: boolean
+  tech?: string[]
 }
 
 async function getJobs(): Promise<Job[]> {
@@ -19,22 +20,33 @@ async function getJobs(): Promise<Job[]> {
       company: "Crema",
       title: "Application Developer III",
       dates: "Aug 2021 - Oct 2023",
-      text: "As an Application Developer III I am expected to lead both the technical planning and development phases of the project. I help make decisions on the tech stack used for the project as well as function as part of the larger development team. As a senior member of the team I assist the team in working through issues and ensure the highest quality and correctness.",
+      text: "As an Application Developer III I led both the technical planning and development phases of the project, working with team members and client stakeholders to ensure the project achieved all goals. During this role I helped choose the tech stacks, planned the technical foundations for things like development strategy, CI/CD, and deployment, as well as took part in the development and shipping of the projects.",
       isCurrent: false,
+      tech: [
+        "TypeScript",
+        "Next.js",
+        "React",
+        "Docker",
+        "Github CI",
+        "Python",
+        "Azure",
+      ],
     },
     {
       company: "Crema",
       title: "Senior Application Developer",
       dates: "Dec 2019 - Aug 2021",
-      text: "In this role I helped build web and mobile applications as a member of the production team while also helping mentor and give direction to the development team as a whole. As a Senior developer I'm expected to have wide areas of expertise and be able to advise the development direction of projects.",
+      text: "As a Senior member of the production team I both helped plan and deliver client projects working daily with all members of the team. These projects ranged from those with a quick turnaround and more long term ones with many release cycles. I was expected to have wide areas of expertise and be able to advise the team at large on technical decisions. As part of my role I was also able to help mentor junior developers at the company.",
       isCurrent: false,
+      tech: ["TypeScript", "React", "Material UI", "Github CI", "Redux"],
     },
     {
       company: "Crema",
       title: "Application Developer",
       dates: "Sep 2016 - Dec 2019",
-      text: "While in this role I developed, implemented, and updated software solutions for web and mobile applications. I gained a lot of experience working in a cross-functional team and grew as a developer while working with other talented devs.",
+      text: "As a developer at Crema I was a member of the production team that developed and maintained client projects. As a developer I worked closely with all members of the production team and with the client. I helped make technical decisions that would lead to a project’s success.",
       isCurrent: false,
+      tech: ["React", "Material UI", "Redux", "TypeScript", "SCSS"],
     },
     {
       company: "Code Koalas",
@@ -42,6 +54,7 @@ async function getJobs(): Promise<Job[]> {
       dates: "Sep 2016 - Nov 2017",
       text: "I lead the team that is the Web/Hybrid Application team at CodeKoalas, we used web technologies such as Javascript, Angular, Ionic, Cordova, React, and React Native to build and launch experiences for clients and consumers on multiple platforms.",
       isCurrent: false,
+      tech: ["React", "Redux", "React-Native", "Angular", "Ionic", "SCSS"],
     },
     {
       company: "Code Koalas",
@@ -49,6 +62,7 @@ async function getJobs(): Promise<Job[]> {
       dates: "Aug 2014 - Sep 2016",
       text: "I was on the team that developed web sites using HTML, CSS, Javascript, PHP, and Drupal.",
       isCurrent: false,
+      tech: ["HTML", "CSS", "JavaScript", "Drupal"],
     },
     {
       company: "The Briefcase",
@@ -56,6 +70,7 @@ async function getJobs(): Promise<Job[]> {
       dates: "May 2014 - Aug 2014",
       text: "I developed and integrated the front-end of Briefcase with the back-end and also made design/usability decisions. I focused on HTML/CSS/JS but occasionally used PHP.",
       isCurrent: false,
+      tech: ["HTML", "CSS", "JavaScript", "JQuery", "PHP"],
     },
     {
       company: "The Briefcase",
@@ -63,6 +78,7 @@ async function getJobs(): Promise<Job[]> {
       dates: "Dec 2013 - May 2014",
       text: "I was a front-end user-experience intern that helped implement the web-app and advised on usability decisions.",
       isCurrent: false,
+      tech: ["HTML", "CSS", "JavaScript"],
     },
   ]
 }
@@ -131,6 +147,20 @@ export default async function History() {
                 <FadeIn>
                   <p className={styles.pastJobText}>{job.text}</p>
                 </FadeIn>
+                {job.tech ? (
+                  <div className={styles.pastJobTech}>
+                    <FadeIn>
+                      <span className={styles.pastJobTechTitle}>
+                        Technologies frequently used:
+                      </span>
+                    </FadeIn>
+                    {job.tech.map((tech, i) => (
+                      <FadeIn delay={50 * i} key={tech}>
+                        <span className={styles.pastJobTag}>{tech}</span>
+                      </FadeIn>
+                    ))}
+                  </div>
+                ) : null}
               </div>
             ))}
           </div>

@@ -53,3 +53,21 @@
 .pastJobText {
     margin-top: 1rem;
 }
+
+.pastJobTech {
+    display: grid;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.pastJobTechTitle {
+    font-size: var(--body-small);
+}
+
+.pastJobTag {
+    font-weight: 700;
+    font-size: var(--body-small);
+}
