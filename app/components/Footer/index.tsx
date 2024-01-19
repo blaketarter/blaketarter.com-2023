@@ -17,7 +17,11 @@ export default function Footer() {
           <Tag className={styles.footerTag}>
             <p className={styles.copywrite}>© 2023 Blake Tarter</p>
           </Tag>
-          <button className={styles.patternButton} onClick={setPattern}>
+          <button
+            className={styles.patternButton}
+            onClick={setPattern}
+            aria-label="Randomize the background patterns"
+          >
             <DiceSVG />
           </button>
           <Tag className={styles.footerTag}>

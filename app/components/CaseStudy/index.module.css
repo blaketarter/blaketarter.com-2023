@@ -1,0 +1,87 @@
+.caseStudyWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.titleWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+}
+
+.innerWrapper {
+  margin-left: 34px;
+  margin-top: 10px;
+  max-height: 0px;
+  transition: .3s ease;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.innerWrapperExpanded {
+  max-height: 1000px;
+  opacity: 1;
+}
+
+.expand {
+  border: none;
+  background: none;
+  box-shadow: none;
+  font-size: 24px;
+  height: 24px;
+  width: 24px;
+  line-height: 24px;
+  display: block;
+  transition: .3s ease;
+  transform-origin: center center;
+  margin-right: 10px;
+  text-align: center;
+}
+
+.expandIsExpanded {
+  transform: rotate(135deg);
+}
+
+.name {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.columns {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
+.column {
+  margin-right: 40px;
+}
+
+.label {
+  font-size: var(--body-small);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.techWrapper {
+  list-style: inside;
+}
+
+.tech {
+  font-size: var(--body-small);
+}
+
+.challengesWrapper {
+  list-style: inside;
+}
+
+.challenge {
+  font-size: var(--body-small);
+}
+
+.description {
+  font-size: var(--body-small);
+  margin-bottom: 1rem;
+}

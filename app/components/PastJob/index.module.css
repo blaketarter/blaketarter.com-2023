@@ -1,0 +1,30 @@
+.pastJob {
+  padding: 0 2rem;
+  margin-top: 80px;
+}
+
+.pastJobTitle {
+  font-size: var(--h3);
+}
+
+.pastJobDates {
+  font-weight: 700;
+  margin-top: 1rem;
+}
+
+.pastJobText {
+  margin-top: 1rem;
+}
+
+.pastJobTech {
+  display: grid;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.pastJobTechTitle {
+  font-size: var(--body-small);
+}
