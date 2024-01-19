@@ -36,38 +36,23 @@
     margin-top: 1rem;
 }
 
-.pastJob {
-    padding: 0 2rem;
-    margin-top: 80px;
-}
-
-.pastJobTitle {
-    font-size: var(--h3);
-}
-
-.pastJobDates {
-    font-weight: 700;
+.caseStudies {
+    margin-left: 2rem;
     margin-top: 1rem;
 }
 
-.pastJobText {
-    margin-top: 1rem;
+.caseStudiesLabel {
+    font-size: var(--body-small);
 }
 
-.pastJobTech {
+.furtherPastJobs {
     display: grid;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-top: 1rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(1fr);
 }
 
-.pastJobTechTitle {
-    font-size: var(--body-small);
-}
-
-.pastJobTag {
-    font-weight: 700;
-    font-size: var(--body-small);
+@media screen and (min-width: 1000px) {
+    .furtherPastJobs {
+        grid-template-columns: 1fr 1fr;
+    }
 }
