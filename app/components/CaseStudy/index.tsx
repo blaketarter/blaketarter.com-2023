@@ -28,14 +28,14 @@ export default function CaseStudy({
             setIsExpanded(!isExpanded)
           }}
         >
-          <div
+          <span
             className={classNames(styles.expand, {
               [styles.expandIsExpanded]: isExpanded,
             })}
           >
             +
-          </div>
-          <h4 className={styles.name}>{name}</h4>
+          </span>
+          <span className={styles.name}>{name}</span>
         </div>
       </FadeIn>
       <div

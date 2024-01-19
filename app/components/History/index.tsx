@@ -1,5 +1,5 @@
 import { Fragment } from "react"
-import PastCaseStudy from "../CasyStudy"
+import PastCaseStudy from "../CaseStudy"
 import FadeIn from "../FadeIn"
 import PastJob from "../PastJob"
 import Section from "../Section"
