@@ -45,8 +45,8 @@ export default function CaseStudy({
       >
         <div className={styles.columns}>
           <div className={styles.column}>
+            <p className={styles.label}>Tech choices:</p>
             <ul className={styles.techWrapper}>
-              <p className={styles.label}>Tech choices:</p>
               {tech.map((t) => (
                 <li className={styles.tech} key={t}>
                   {t}

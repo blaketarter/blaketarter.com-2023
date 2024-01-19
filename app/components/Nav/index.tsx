@@ -25,11 +25,11 @@ const navItems = [
 export default function Nav() {
   return (
     <nav className={styles.navWrapper}>
-      <ul className={styles.navInner}>
+      <div className={styles.navInner}>
         <FadeIn delay={1500} direction="down">
           <ThemeSwitcher />
         </FadeIn>
-        <div className={styles.navItems}>
+        <ul className={styles.navItems}>
           {navItems.map((item) => (
             <li className={styles.navItem} key={item.text}>
               <FadeIn delay={1700} direction="down">
@@ -39,8 +39,8 @@ export default function Nav() {
               </FadeIn>
             </li>
           ))}
-        </div>
-      </ul>
+        </ul>
+      </div>
     </nav>
   )
 }
